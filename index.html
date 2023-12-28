@@ -4,104 +4,114 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>CSS Cheat Sheet</title>
-		<link rel="stylesheet" href="./css/reset.css" />
-		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="stylesheet" href="./assets/css/reset.css" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
 	</head>
-<body>
 
-    
+  <body>
+   
     <header>
-        <h1>CSS Cheat Sheet</h1>
-        <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur vitae
-            inventore ducimus vel cumque deleniti minus soluta asperiores earum eos
-            dignissimos fugit accusamus neque sapiente, quam ad optio sit odio!
-        </p>
+      <h1>CSS Cheat Sheet</h1>
+      <p>
+            A reference to some important and very necessary CSS codes. For future use. For my sanity. Yep. 
+      </p>
     </header>
+
     <main>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
-        <div class="card">
-            <h2 class="card-header">Flexbox Row</h2>
-            <p class="card-desc">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nihil.
-            </p>
-            <pre class="card-code">
-      <code>.row {
-          display: flex;
-          flex-wrap:wrap;
-      }
-      </code>
-    </pre>
-        </div>
+      <section class="container">
+      <div class="card">
+        <h2 class="card-header">Flexbox Row</h2>
+        <p class="card-desc">
+          Use these three properties to create a Flexbox row layout.
+        </p>
+        <pre class="card-code"><code>.row {
+    display: flex;
+    flex-direction: row;      
+    flex-wrap:wrap;  
+  }</code></pre>
+      </div>
+      </section>
+
+      <section class="container">
+      <div class="card">
+        <h2 class="card-header">Flexbox Column</h2>
+        <p class="card-desc">
+          Use this to create a Flexbox column layout.
+        </p>
+        <pre class="card-code"><code>.column {
+    display: flex;
+    flex-direction: column;
+  }</code></pre>
+      </div>
+      </section>
+
+      <section class="container">
+      <div class="card">
+        <h2 class="card-header">CSS Grid Layout</h2>
+        <p class="card-desc">
+          Buld a 12-column layout using CSS Grid.
+        </p>
+        <pre class="card-code"><code>.grid {
+    display: grid; 
+    width: 100%;
+    grid-template-columns:
+    repeat (12, 1fr);
+  }</code></pre>
+      </div>
+     </section>
+
+     <section class="container">
+     <div class="card">
+        <h2 class="card-header">Linear Gradients</h2>
+        <p class="card-desc">
+          This will create a background linear gradient from top to bottom.
+        </p>
+        <pre class="card-code"><code>.linear-gradient-background {
+    background-image: linear-gradient(
+    rgba (232, 102, 236, 0.3) 0%,
+    rgba (232, 102, 236, 0.6) 100%
+    );
+  }</code></pre>
+      </div>
+      </section>
+
+    <section class="container">
+      <div class="card">
+        <h2 class="card-header">Box Transition Glow</h2>
+        <p class="card-desc">
+          Use transition and box shadows to glow on hover.
+        <pre class="card-code"><code>.code-card .card-header {
+    border-radius: 8px;
+              transition: all 0.5s ease-in-out;
+            }
+    .code-card: hover,
+    .code-card: hover .card-header {
+    box-shadow: inset Opx Opx 8px 
+    rgba (232, 102, 236, 1), 0 0 15px
+    rgba (232, 102, 236, 1);
+  }</code></pre>
+      </div>
+      </section>
+
+    <section class="container">
+      <div class="card">
+        <h2 class="card-header">Overlay Card with Title</h2>
+        <p class="card-desc">
+          Use position properties and negative margins to raise elements higher than their natural starting point.
+        </p>
+        <pre class="card-code"><code>.card-header {
+    position: relative; 
+    margin-top: -20px;
+    }
+          </code></pre>
+      </div>
+      </section>
+    
     </main>
     <footer>
-        <h3>
-            Made with <span role="img" aria-label="heart emoji">🩵</span> and CSS
-        </h3>
+      <h3>
+        Made with <span role="img" aria-label="heart emoji">🩵</span> and CSS
+      </h3>
     </footer>
 </body>
 </html>
