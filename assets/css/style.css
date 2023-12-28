@@ -39,11 +39,6 @@ header p {
 
 }
 
-/* pre {
-    font-size: 1rem;
-    margin: 0;
-} */
-
 footer {
     text-align: center;
     font-size: 25px;
@@ -60,11 +55,14 @@ footer {
 }
 
 .card {
+    display: flex;
+	flex-direction: column;
+    min-height: 100%; /*this makes all "cards" the same size*/
     outline: 2px dashed; /*this is a like a border except it's outside the element*/
     outline-color: var(--gin);
-    margin: 10%;
-    padding: 15px;
+    padding: 20px;
     color: var(--pink);
+    transition: all 0.5s ease-in-out;
     
     
 }
@@ -77,8 +75,9 @@ footer {
     border-radius: 8px;
     border-color: var(--gin);
     position: relative; 
-    margin-top: -30px;
+    margin-top: -40px;
     color: var(--pink);
+    transition: all 0.5s ease-in-out;
     
     
 }
@@ -90,9 +89,11 @@ footer {
 }
 
 .card-code { 
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: 'Andale Mono WT', 'Andale Mono', Monaco, 'Courier New', Courier,
+    monospace;
     white-space: pre-wrap;
-    font-size: 1.3rem;
+    /* tab-size: 4; */
+    font-size: 1rem;
     margin: 5px;
     color: var(--gin);
     background-image: linear-gradient( /*this is for the background for .card-code*/
@@ -101,7 +102,24 @@ footer {
 	);
     border-radius: 8px;
     padding: 5%;
+    display: flex; /*this makes the background occupy the extra space to the bottom*/
+	flex-grow: 1;
 
+}
+/*element behaviors when interacted with*/
+.card:hover,
+.card:hover .card-header { /*this adds the glow on click of card*/
+	box-shadow: inset 0px 0px 8px var(--pink),
+    0 0 15px var(--pink);
+}
+
+.card-code:active { /*when you click on any part of the card-code, select all*/
+	user-select: all;
+}
+
+::selection { /*when you select any part on the card-code, it will highlight in turquoise*/
+	background-color: var(--turquoise);
+	color: var(--outer-space); /*when the element is selected (card-code), it will change to grey (instead of white)*/
 }
 
 @media screen and (max-width: 992px) {
