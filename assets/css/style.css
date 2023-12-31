@@ -13,30 +13,30 @@ body {
 }
 
 main {
-    width: 96%;
-	margin: 0 auto;
+    width: 95%; /*width of the whole main "box"*/
+	margin: 0 auto; /*top/bottom left/right*/
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-    
-
 }
 
-
 h1 {
-    font-size: 50px;
+    font-size: 45px;
     color: var(--pink);
     text-align: center;
-    padding: 20px;
-   
+    padding: 20px;  
+}
+/* added text shadow for fun. text shadow: horizontal offst, vertical offset, blur radius, shadow base color (can apply more than one) */
+h1,
+.card-header {
+    text-shadow: 2px 2px 3px var(--turquoise);
 }
 
 header p {
     text-align: center;
-    padding-bottom: 20px;
+    margin-bottom: 25px;
+    padding: 0 0 20px 20px;
     color: #e0eae4;
-
-
 }
 
 footer {
@@ -48,8 +48,8 @@ footer {
 /* class selectors */
 
 .container {
-    flex: 1 1 calc(100% / 3); /*the flex calc in the basis spot calculates 1/3 of the screen width*/
-    transition: flex-basis 500ms linear;
+    flex: 1 1 calc(100% / 3); /*the flex calc in the basis value calculates 1/3 of the screen width*/
+    transition: flex-basis 500ms linear; 
     padding: 15px;
     margin-bottom: 15px;
 }
@@ -62,9 +62,7 @@ footer {
     outline-color: var(--gin);
     padding: 20px;
     color: var(--pink);
-    transition: all 0.5s ease-in-out;
-    
-    
+    transition: all 0.5s ease-in-out; /*how fast this element "glows"*/
 }
 
 .card-header {
@@ -77,9 +75,7 @@ footer {
     position: relative; 
     margin-top: -40px;
     color: var(--pink);
-    transition: all 0.5s ease-in-out;
-    
-    
+    transition: all 0.5s ease-in-out;    
 }
 
 .card-desc {
@@ -101,13 +97,14 @@ footer {
 		rgba(232, 102, 236, 0.6) 100%
 	);
     border-radius: 8px;
-    padding: 5%;
-    display: flex; /*this makes the background occupy the extra space to the bottom*/
+    padding: 7%;
+    display: flex; /*this makes the background of the code occupy the extra space to the bottom*/
 	flex-grow: 1;
-
 }
+
 /*element behaviors when interacted with*/
-.card:hover,
+
+.card:hover, /*when .card is in the state of hover ..*/
 .card:hover .card-header { /*this adds the glow on click of card*/
 	box-shadow: inset 0px 0px 8px var(--pink),
     0 0 15px var(--pink);
@@ -122,6 +119,7 @@ footer {
 	color: var(--outer-space); /*when the element is selected (card-code), it will change to grey (instead of white)*/
 }
 
+/* media query */
 @media screen and (max-width: 992px) {
     .container {
         flex-basis: 50%;
